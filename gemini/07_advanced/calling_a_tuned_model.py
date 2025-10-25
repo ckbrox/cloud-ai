@@ -1,0 +1,1 @@
+model="projects/<your-gcp-project-number>/locations/<location-of-your-tuned-model-endpoint>/endpoints/<endpoint-id>"

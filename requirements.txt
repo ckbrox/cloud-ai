@@ -1,0 +1,4 @@
+google-genai
+google-adk
+google-cloud-texttospeech
+python-dotenv

@@ -6,3 +6,9 @@ twilio
 google-cloud-secret-manager
 a2a-sdk
 langchain-google-vertexai
+google-cloud-documentai
+firebase-admin
+
+pymediainfo
+mistune
+gspread

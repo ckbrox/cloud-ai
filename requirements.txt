@@ -5,3 +5,4 @@ python-dotenv
 twilio
 google-cloud-secret-manager
 a2a-sdk
+langchain-google-vertexai

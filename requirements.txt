@@ -12,3 +12,4 @@ pymediainfo
 mistune
 gspread
 anthropic[vertex]
+openai

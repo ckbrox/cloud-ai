@@ -4,22 +4,8 @@ import google.auth.transport.requests
 import requests
 import json
 
-credentials, project_id = google.auth.default(
-      scopes=['https://www.googleapis.com/auth/cloud-platform']
-  )
-
-def get_access_token():
-    # Get credentials using Application Default Credentials
-
-    # Create a Request object for making HTTP requests
-    auth_req = google.auth.transport.requests.Request()
-
-    # Refresh credentials if they are expired
-    credentials.refresh(auth_req)
-
-    # Get the access token
-    access_token = credentials.token
-    return access_token
+credentials, project_id = google.auth.default(scopes=['https://www.googleapis.com/auth/cloud-platform'])
+credentials.refresh(google.auth.transport.requests.Request())
 
 location = 'global'
 model = 'gemini-2.5-flash'
@@ -45,7 +31,7 @@ data = {
 
 headers = {
     'Content-Type': 'application/json',
-    'Authorization': f'Bearer {get_access_token()}'
+    'Authorization': f'Bearer {credentials.token}'
 }
 
 

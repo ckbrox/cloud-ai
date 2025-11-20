@@ -31,7 +31,8 @@ response = client.models.generate_content(
                         'servings': {'type': 'number'}
                     },
                     'required': ['prep_time_minutes', 'cook_time_minutes', 'servings']
-                }
+                },
+                'food_type': {'type': 'string', 'enum': ['dessert', 'snack', 'breakfast']}
             },
             'required': ['name', 'ingredients', 'instructions']
         }

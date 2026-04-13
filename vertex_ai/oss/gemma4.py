@@ -7,9 +7,6 @@ credentials, project_id = google.auth.default(
     scopes=['https://www.googleapis.com/auth/cloud-platform']
 )
 
-if not project_id:
-    project_id = "ckb-onboarding"
-
 def get_access_token():
     auth_req = google.auth.transport.requests.Request()
     credentials.refresh(auth_req)

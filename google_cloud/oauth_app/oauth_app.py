@@ -81,5 +81,7 @@ def clear():
     return 'Session cleared.'
 
 if __name__ == '__main__':
-    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    # Only enable insecure OAuth transport if explicitly requested for local testing
+    if os.environ.get('ALLOW_INSECURE_OAUTH') == '1':
+        os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
     app.run(debug=True)
